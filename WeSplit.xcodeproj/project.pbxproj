@@ -66,6 +66,7 @@
 			);
 			path = WeSplit;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		FCAF6BD02617D3DD004856B1 /* Preview Content */ = {
 			isa = PBXGroup;
