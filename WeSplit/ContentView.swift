@@ -48,7 +48,7 @@ struct ContentView: View {
         return tipValue
     }
     
-    // "some" indicates that body will return exactly one view
+    // "some" indicates that body will return exactly one view, but we don't know the specifics yet
     var body: some View {
         NavigationView { // This allows iOS to slide in a new view when the picker is used; this is necessary for declaring that we're going to have a hierarchy of views within the body
             Form {
@@ -83,6 +83,8 @@ struct ContentView: View {
                     Text("Tip: $\(totalTip, specifier: "%.2f")")
                     Text("Grand total: $\(totalBill, specifier: "%.2f")")
                 }
+                // Challenge 2 from project 3 asks me to use a conditional modifier to change the total amount text view to red if the user selects a 0% tip.
+                .foregroundColor(tipPercentage == 4 ? Color.red : Color.black)
                 
                 // Challenge 1 asks me to add a header to this section
                 Section(header: Text("Amout per person")) {
